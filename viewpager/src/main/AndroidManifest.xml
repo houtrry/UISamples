@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.houtrry.viewpager">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".ui.ViewPagerActivity">
+        </activity>
+        <activity android:name=".ui.CarouselViewPagerActivity">
+        </activity>
+        <activity android:name=".ui.CommonViewPagerActivity">
+        </activity>
+        <activity android:name=".ui.TransformViewPagerActivity">
+        </activity>
+        <activity android:name=".ui.MultipleItemViewPagerActivity">
+        </activity>
+    </application>
+
+</manifest>

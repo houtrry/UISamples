@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.houtrry.viewpager.ui.ViewPagerActivity">
+
+    <Button
+        android:id="@+id/btn_common_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="普通的ViewPager"
+        app:layout_constraintBottom_toTopOf="@+id/btn_carousel_viewPager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_carousel_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="实现轮播的ViewPager"
+        app:layout_constraintBottom_toTopOf="@+id/btn_transform_viewPager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_common_viewPager"/>
+
+    <Button
+        android:id="@+id/btn_transform_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="实现Transform的ViewPager"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiple_item_viewPager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_carousel_viewPager"/>
+
+    <Button
+        android:id="@+id/btn_multiple_item_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="一页显示多个Item的ViewPager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_transform_viewPager"/>
+
+</android.support.constraint.ConstraintLayout>
