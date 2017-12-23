@@ -18,7 +18,7 @@ public class ScaleTransformer implements ViewPager.PageTransformer {
     public void transformPage(View page, float position) {
         float scaleX = 0;
         if (position >= 1 || position <= -1) {
-            scaleX = 0;
+            scaleX = MAX_SCALE;
         } else {
             scaleX = 1 - (1 - MAX_SCALE) * Math.abs(position);
         }
