@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,8 +12,10 @@ import android.view.View;
 import com.houtrry.viewpager.R;
 import com.houtrry.viewpager.adapter.CarouselViewPagerAdapter;
 import com.houtrry.viewpager.bean.ViewPagerBean;
+import com.houtrry.viewpager.impl.FixedSpeedScroller;
 
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,6 +68,8 @@ public class CarouselViewPagerActivity extends AppCompatActivity {
         mViewPager.setAdapter(viewPagerAdapter);
 
         mViewPager.setCurrentItem(Integer.MAX_VALUE / 2 - (Integer.MAX_VALUE / 2) % mViewPagerBeans.size());
+
+        handleViewPagerScroller();
     }
 
     private void initEvent() {
@@ -110,6 +115,19 @@ public class CarouselViewPagerActivity extends AppCompatActivity {
         super.onDestroy();
         if (mCarouselHandler != null) {
             mCarouselHandler.destroy();
+        }
+    }
+
+    private void handleViewPagerScroller() {
+        try {
+            Field field = ViewPager.class.getDeclaredField("mScroller");
+            field.setAccessible(true);
+            FixedSpeedScroller scroller = new FixedSpeedScroller(mViewPager.getContext(),
+                    new FastOutSlowInInterpolator());
+            field.set(mViewPager, scroller);
+            scroller.setSlideDuration(500);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

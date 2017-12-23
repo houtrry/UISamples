@@ -17,9 +17,10 @@ import java.util.List;
  * @date: ${DATE} ${TIME}
  * @version:
  * @description: 一页显示多个Item
+ * <p>
+ * !!!注意 ViewPager和ViewPager的父控件都需要添加clipChildren="false"属性
  */
 public class MultipleItemViewPagerActivity extends AppCompatActivity {
-
 
 
     private ViewPager mViewPager;
@@ -42,7 +43,7 @@ public class MultipleItemViewPagerActivity extends AppCompatActivity {
 
     private void initData() {
         int[] imageIds = {R.drawable.img0, R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4};
-        String[] descs = {"狗狗"+0, "狗狗"+1, "狗狗"+2, "狗狗"+3, "狗狗"+4};
+        String[] descs = {"狗狗" + 0, "狗狗" + 1, "狗狗" + 2, "狗狗" + 3, "狗狗" + 4};
         mViewPagerBeans = new ArrayList<>();
 
         for (int i = 0; i < imageIds.length; i++) {
