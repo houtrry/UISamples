@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.het.recyclerviewlibrary.view.activity.RecyclerViewActivity;
 import com.houtrry.uisamples.R;
 import com.houtrry.viewpager.ui.ViewPagerActivity;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_viewPager).setOnClickListener(this);
+        findViewById(R.id.btn_recycler).setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_viewPager:{
                 startAty(ViewPagerActivity.class);
+                break;
+            }
+            case R.id.btn_recycler:{
+                startAty(RecyclerViewActivity.class);
                 break;
             }
             default:

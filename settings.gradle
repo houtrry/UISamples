@@ -1,1 +1,1 @@
-include ':app', ':viewpagerlibrary', ':recyclerviewlibrary'
+include ':app', ':viewpagerlibrary', ':recyclerviewlibrary', ':basiclibrary'
