@@ -1,30 +1,30 @@
 package com.het.recyclerviewlibrary.view.activity;
 
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 
 import com.het.basiclibrary.view.activity.BaseActivity;
 import com.het.recyclerviewlibrary.R;
 import com.het.recyclerviewlibrary.adapter.SampleSnapHelperAdapter;
 import com.het.recyclerviewlibrary.bean.ImageBean;
+import com.het.recyclerviewlibrary.impl.GallerySnapHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author: houtrry
- * @date: 2017/12/29
+ * @date: ${DATE} ${TIME}
  * @version:
  * @description: ${TODO}
  */
-public class SnapHelperActivity extends BaseActivity {
+public class CustomSnapHelperActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
 
     @Override
     protected int getContentLayoutId() {
-        return R.layout.activity_snap_helper;
+        return R.layout.activity_custom_snap_helper;
     }
 
     @Override
@@ -58,21 +58,11 @@ public class SnapHelperActivity extends BaseActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-//        LinearSnapHelper linearSnapHelper = new LinearSnapHelper();
-//        linearSnapHelper.attachToRecyclerView(mRecyclerView);
-
-
-        /**
-         *
-         *  LinearSnapHelper 与 PagerSnapHelper 区别：
-         *   LinearSnapHelper：一次可以滑动多条item。
-         *   PagerSnapHelper：一次只能滑动一条item。可以使用RecyclerView + PagerSnapHelper 实现ViewPager的页面切换效果。
-         *
-         */
-        PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
-        pagerSnapHelper.attachToRecyclerView(mRecyclerView);
+        GallerySnapHelper gallerySnapHelper = new GallerySnapHelper();
+        gallerySnapHelper.attachToRecyclerView(mRecyclerView);
 
         SampleSnapHelperAdapter sampleSnapHelperAdapter = new SampleSnapHelperAdapter(mImageBeanList);
         mRecyclerView.setAdapter(sampleSnapHelperAdapter);
     }
+
 }

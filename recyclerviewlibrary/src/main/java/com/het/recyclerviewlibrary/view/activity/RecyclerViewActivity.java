@@ -24,6 +24,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         setTitle("RecyclerView相关");
 
         findViewById(R.id.btn_snap_helper).setOnClickListener(this);
+        findViewById(R.id.btn_custom_snap_helper).setOnClickListener(this);
 
     }
 
@@ -32,6 +33,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         final int viewId = v.getId();
         if (viewId == R.id.btn_snap_helper) {
             ActivityUtils.startAty(RecyclerViewActivity.this, SnapHelperActivity.class);
+        } else if (viewId == R.id.btn_custom_snap_helper) {
+            ActivityUtils.startAty(RecyclerViewActivity.this, CustomSnapHelperActivity.class);
         }
     }
 }

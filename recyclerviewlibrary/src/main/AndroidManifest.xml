@@ -10,6 +10,8 @@
         </activity>
         <activity android:name=".view.activity.SnapHelperActivity">
         </activity>
+        <activity android:name=".view.activity.CustomSnapHelperActivity">
+        </activity>
     </application>
 
 </manifest>
