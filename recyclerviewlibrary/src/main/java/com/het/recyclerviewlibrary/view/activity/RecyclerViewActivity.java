@@ -2,6 +2,7 @@ package com.het.recyclerviewlibrary.view.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 import com.het.basiclibrary.utils.ActivityUtils;
@@ -16,6 +17,8 @@ import com.het.recyclerviewlibrary.R;
  */
 public class RecyclerViewActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = RecyclerViewActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         findViewById(R.id.btn_snap_helper).setOnClickListener(this);
         findViewById(R.id.btn_custom_snap_helper).setOnClickListener(this);
 
+
+
     }
 
     @Override
@@ -35,6 +40,11 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
             ActivityUtils.startAty(RecyclerViewActivity.this, SnapHelperActivity.class);
         } else if (viewId == R.id.btn_custom_snap_helper) {
             ActivityUtils.startAty(RecyclerViewActivity.this, CustomSnapHelperActivity.class);
+
+
+            for (int i = 0; i < 50; i++) {
+                Log.i(TAG, "onClick: i: "+i);
+            }
         }
     }
 }
