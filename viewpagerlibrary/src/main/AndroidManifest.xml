@@ -16,6 +16,8 @@
         </activity>
         <activity android:name=".ui.MultipleItemViewPagerActivity">
         </activity>
+        <activity android:name=".ui.MultipleItemUpgradesViewPagerActivity">
+        </activity>
     </application>
 
 </manifest>

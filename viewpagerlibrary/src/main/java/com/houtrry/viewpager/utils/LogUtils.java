@@ -17,4 +17,8 @@ public class LogUtils {
         Log.d(DEFAULT_TAG, message);
     }
 
+    public static void e(String message) {
+        Log.e(DEFAULT_TAG, message);
+    }
+
 }

@@ -28,6 +28,7 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
         findViewById(R.id.btn_carousel_viewPager).setOnClickListener(this);
         findViewById(R.id.btn_transform_viewPager).setOnClickListener(this);
         findViewById(R.id.btn_multiple_item_viewPager).setOnClickListener(this);
+        findViewById(R.id.btn_multiple_item_upgrades_viewPager).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +42,8 @@ public class ViewPagerActivity extends AppCompatActivity implements View.OnClick
             startAty(TransformViewPagerActivity.class);
         } else if (viewId == R.id.btn_multiple_item_viewPager) {
             startAty(MultipleItemViewPagerActivity.class);
+        } else if (viewId == R.id.btn_multiple_item_upgrades_viewPager) {
+            startAty(MultipleItemUpgradesViewPagerActivity.class);
         }
     }
 

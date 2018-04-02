@@ -4,6 +4,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.houtrry.viewpager.utils.LogUtils;
+import com.houtrry.viewpager.widget.RotateY3DRelativeLayout;
 
 /**
  * @author: houtrry
@@ -12,7 +13,7 @@ import com.houtrry.viewpager.utils.LogUtils;
  * @description: 这个有问题
  */
 
-public class ScaleTransformer implements ViewPager.PageTransformer {
+public class ScaleTransformerUpgrades implements ViewPager.PageTransformer {
 
     private static final float MAX_SCALE  = 0.75f;
 
@@ -20,7 +21,7 @@ public class ScaleTransformer implements ViewPager.PageTransformer {
     public void transformPage(View page, float position) {
 
 
-        LogUtils.e("===>>>page.getClass:  "+page.getClass());
+        LogUtils.e("===>>>page.getClass:  "+page.getClass()+", position: "+position);
 
         float scaleX = 0;
         if (position >= 1 || position <= -1) {
@@ -31,5 +32,9 @@ public class ScaleTransformer implements ViewPager.PageTransformer {
         page.setScaleX(scaleX);
         page.setScaleY(scaleX);
         page.setAlpha(scaleX);
+
+        if (page instanceof RotateY3DRelativeLayout) {
+            ((RotateY3DRelativeLayout)page).setProgress(position);
+        }
     }
 }

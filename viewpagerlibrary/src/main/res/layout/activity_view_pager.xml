@@ -54,9 +54,22 @@
         android:textSize="15sp"
         android:textColor="@android:color/holo_blue_light"
         android:text="一页显示多个Item的ViewPager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiple_item_upgrades_viewPager"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_transform_viewPager"/>
+
+    <Button
+        android:id="@+id/btn_multiple_item_upgrades_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="一页显示多个Item的ViewPager 3D旋转效果"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_multiple_item_viewPager"/>
 
 </android.support.constraint.ConstraintLayout>
