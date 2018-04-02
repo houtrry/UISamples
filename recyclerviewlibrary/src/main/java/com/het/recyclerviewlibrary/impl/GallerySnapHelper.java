@@ -37,8 +37,9 @@ public class GallerySnapHelper extends SnapHelper {
     @Override
     public View findSnapView(RecyclerView.LayoutManager layoutManager) {
         //该方法会找到当前layoutManager上最接近对齐位置的那个view，
-        // 该view称为SanpView，对应的position称为SnapPosition。
+        // 该view称为SnapView，对应的position称为SnapPosition。
         // 如果返回null，就表示没有需要对齐的View，也就不会做滚动对齐调整。
+        //比如LinearSnapHelper#findSnapView， 会返回当前最接近RecyclerView中心位置（也就是对齐位置）的Item View
         return null;
     }
 
