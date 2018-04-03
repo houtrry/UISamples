@@ -39,5 +39,10 @@ public class ScaleTransformerUpgrades implements ViewPager.PageTransformer {
         page.setPivotX(0.5f * page.getMeasuredWidth());
         page.setPivotY(0.5f * page.getMeasuredHeight());
         page.setRotationY(rotateY * 15 * -1);
+
+//
+//        if (page instanceof RotateY3DRelativeLayout) {
+//            ((RotateY3DRelativeLayout)page).setProgress(rotateY);
+//        }
     }
 }

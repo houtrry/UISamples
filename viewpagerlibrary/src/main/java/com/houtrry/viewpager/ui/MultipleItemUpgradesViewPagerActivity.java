@@ -5,7 +5,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.houtrry.viewpager.R;
-import com.houtrry.viewpager.adapter.CommonViewPagerAdapter;
+import com.houtrry.viewpager.adapter.MultipleItemUpgradesAdapter;
 import com.houtrry.viewpager.bean.ViewPagerBean;
 import com.houtrry.viewpager.impl.ScaleTransformerUpgrades;
 
@@ -54,7 +54,8 @@ public class MultipleItemUpgradesViewPagerActivity extends AppCompatActivity {
     }
 
     private void initViewPager() {
-        CommonViewPagerAdapter viewPagerAdapter = new CommonViewPagerAdapter(mViewPagerBeans);
+//        CommonViewPagerAdapter viewPagerAdapter = new CommonViewPagerAdapter(mViewPagerBeans);
+        MultipleItemUpgradesAdapter viewPagerAdapter = new MultipleItemUpgradesAdapter(mViewPagerBeans);
 
         //设置Page间间距
         mViewPager.setPageMargin(20);
