@@ -35,6 +35,7 @@ public class RotateY3DRelativeLayout extends RelativeLayout {
 
     private void init(Context context, AttributeSet attrs) {
 
+        mCamera.setLocation(0, 0, -20);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class RotateY3DRelativeLayout extends RelativeLayout {
     @Override
     public void draw(Canvas canvas) {
 
-        super.draw(canvas);
+
         canvas.save();
 
         mCamera.save(); // 保存 Camera 的状态
@@ -62,6 +63,7 @@ public class RotateY3DRelativeLayout extends RelativeLayout {
         canvas.translate(-mCenterX, -mCenterY); // 旋转之前把绘制内容移动到轴心（原点）
         mCamera.restore(); // 恢复 Camera 的状态
 
+        super.draw(canvas);
         canvas.restore();
     }
 

@@ -3,9 +3,6 @@ package com.houtrry.viewpager.impl;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.houtrry.viewpager.utils.LogUtils;
-import com.houtrry.viewpager.widget.RotateY3DRelativeLayout;
-
 /**
  * @author: houtrry
  * @date: 2017/12/22 17:23
@@ -15,13 +12,10 @@ import com.houtrry.viewpager.widget.RotateY3DRelativeLayout;
 
 public class ScaleTransformerUpgrades implements ViewPager.PageTransformer {
 
-    private static final float MAX_SCALE  = 0.75f;
+    private static final float MAX_SCALE = 0.75f;
 
     @Override
     public void transformPage(View page, float position) {
-
-
-        LogUtils.e("===>>>page.getClass:  "+page.getClass()+", position: "+position);
 
         float scaleX = 0;
         if (position >= 1 || position <= -1) {
@@ -33,8 +27,17 @@ public class ScaleTransformerUpgrades implements ViewPager.PageTransformer {
         page.setScaleY(scaleX);
         page.setAlpha(scaleX);
 
-        if (page instanceof RotateY3DRelativeLayout) {
-            ((RotateY3DRelativeLayout)page).setProgress(position);
+
+        float rotateY = 0;
+        if (position < -1) {
+            rotateY = -1;
+        } else if (position > 1) {
+            rotateY = 1;
+        } else {
+            rotateY = position;
         }
+        page.setPivotX(0.5f * page.getMeasuredWidth());
+        page.setPivotY(0.5f * page.getMeasuredHeight());
+        page.setRotationY(rotateY * 15 * -1);
     }
 }
