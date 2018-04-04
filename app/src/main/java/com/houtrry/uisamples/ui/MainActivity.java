@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.het.nestedscorlllibrary.component.activity.NestedScrollActivity;
 import com.het.recyclerviewlibrary.view.activity.RecyclerViewActivity;
 import com.houtrry.uisamples.R;
 import com.houtrry.viewpager.ui.ViewPagerActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_viewPager).setOnClickListener(this);
         findViewById(R.id.btn_recycler).setOnClickListener(this);
+        findViewById(R.id.btn_nested_scroll).setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_recycler:{
                 startAty(RecyclerViewActivity.class);
+                break;
+            }
+            case R.id.btn_nested_scroll:{
+                startAty(NestedScrollActivity.class);
                 break;
             }
             default:
