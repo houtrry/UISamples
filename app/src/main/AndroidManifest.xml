@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.basicLibraryTest.OnActivityResultTestActivity">
+        </activity>
+        <activity android:name=".ui.basicLibraryTest.BasicLibraryTestActivity">
+        </activity>
     </application>
 
 </manifest>
