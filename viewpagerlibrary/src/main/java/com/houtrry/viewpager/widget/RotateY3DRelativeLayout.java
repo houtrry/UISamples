@@ -3,7 +3,7 @@ package com.houtrry.viewpager.widget;
 import android.content.Context;
 import android.graphics.Camera;
 import android.graphics.Canvas;
-import android.support.v4.view.ViewCompat;
+import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 

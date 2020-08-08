@@ -1,1 +1,2 @@
+include ':chartlibrary'
 include ':app', ':viewpagerlibrary', ':recyclerviewlibrary', ':basiclibrary', ':nestedscorlllibrary'

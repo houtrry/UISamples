@@ -1,7 +1,7 @@
 package com.het.nestedscorlllibrary.component.widget;
 
 import android.content.Context;
-import android.support.v4.view.NestedScrollingParent;
+import androidx.core.view.NestedScrollingParent;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 

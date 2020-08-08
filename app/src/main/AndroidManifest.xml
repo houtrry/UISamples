@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".ui.basicLibraryTest.BasicLibraryTestActivity">
         </activity>
+        <activity android:name=".ui.ChartViewActivity">
+        </activity>
     </application>
 
 </manifest>

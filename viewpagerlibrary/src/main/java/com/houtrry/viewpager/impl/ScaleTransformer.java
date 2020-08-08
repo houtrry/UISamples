@@ -1,6 +1,6 @@
 package com.houtrry.viewpager.impl;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 
 import com.houtrry.viewpager.utils.LogUtils;

@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.het.nestedscorlllibrary.component.activity.NestedScrollActivity;
@@ -13,6 +11,9 @@ import com.het.recyclerviewlibrary.view.activity.RecyclerViewActivity;
 import com.houtrry.uisamples.R;
 import com.houtrry.uisamples.ui.basicLibraryTest.BasicLibraryTestActivity;
 import com.houtrry.viewpager.ui.ViewPagerActivity;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author: houtrry
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_recycler).setOnClickListener(this);
         findViewById(R.id.btn_nested_scroll).setOnClickListener(this);
         findViewById(R.id.btn_basic_library_test).setOnClickListener(this);
+        findViewById(R.id.btn_chart_view_test).setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.btn_basic_library_test:{
                 startAty(BasicLibraryTestActivity.class);
+                break;
+            }
+            case R.id.btn_chart_view_test:{
+                startAty(ChartViewActivity.class);
                 break;
             }
             default:

@@ -1,6 +1,6 @@
 package com.het.recyclerviewlibrary.bean;
 
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 
 /**
  * @author: houtrry

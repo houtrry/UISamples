@@ -2,7 +2,6 @@ package com.houtrry.uisamples.ui.basicLibraryTest;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.het.basiclibrary.callback.OnActivityResultCallback;
@@ -10,6 +9,8 @@ import com.het.basiclibrary.utils.LogUtils;
 import com.het.basiclibrary.utils.ToastUtils;
 import com.het.basiclibrary.view.fragment.ActivityResultRequest;
 import com.houtrry.uisamples.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BasicLibraryTestActivity extends AppCompatActivity implements View.OnClickListener {
 
